@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>P-IVI Translation Testing - WEATHER - zh-Hans</title>
+
+<link rel='stylesheet' href='./css/P-IVI_Apps_SimChinese.css'>
+    <style type="text/css">
+
+        li {
+            list-style-type: none;
+        }
+
+        li div {
+            clear: both;
+            display: block;
+        }
+
+        li.row {
+            border-left: 10px solid red;
+            padding-left: 1em;
+        }
+
+        li.row .alertNotification {
+            color:white;
+            background: red;
+        }
+    </style>
+    <script>
+
+        class calculateDimensions {
+
+            // Obtain element(s) to be calculated
+            constructor(parentSelector) {
+                this.fixedElement = parentSelector;
+            }
+
+            // Calculate the differences in height and width
+            calc() {
+
+                //  Collection of parent elements
+                var  fixedElements  = document.querySelectorAll("."+this.fixedElement);
+
+                // Get parent dimensions
+                fixedElements.forEach(function (ele, indx){
+
+                    var fE = ele.querySelector("div");
+                    var dE = ele.querySelector("div>span");
+
+                    // Check if dynamic element overflows the parent
+                    if ((dE.getBoundingClientRect()["width"] > fE.clientWidth )
+                        || (dE.getBoundingClientRect()["height"] > fE.clientHeight)) {
+
+                        // Style found issues appropriately for visual recognition
+                        dE.classList.add("alertNotification");
+                        ele.classList.add("row");
+    debugger;
+                        // Increase white-space between lists
+                        ele.setAttribute("style", "height:" + dE.getBoundingClientRect()['height'] + "px");
+
+                    }
+
+                });
+
+            }
+
+            // Highlight found issues
+            highLight () {
+
+                // TODO: Add custom highlights
+                // Calculated element outlined for ease of recognition
+
+            }
+
+        }
+
+        // Wait for document(web page and elements) to fully load
+        document.addEventListener("DOMContentLoaded", function(event) {
+            console.log("DOM fully loaded and parsed");
+
+            // Provide parent container class
+            let calculate = new calculateDimensions("String_ID_ISSUE");
+
+            // Perform checks
+            calculate.calc();
+        });
+
+    </script>
+</head>
+
+<body>
+<h3>WEATHER - zh-Hans</h3><br>
+
+<!--
+   --   Structure of Translation markup is important!
+   --   Lists elements define child elements to be compared with the parent.
+   --   If the child element is larger than the parent a class will be added to the parent and child.
+   --   --------------------------------------------------------
+   --   CSS properties prevent the child element from overflowing horizontally.
+   --   TODO: Update required for horizontal detection {width : max-content; display: block} to be applied to spans
+   --   TODO: Consider minimum and maximum parameters for height detection for multi-line content
+   --   TODO: Windows version - requires update to DOM methods
+   -->
+
+<ul>
+
+    <li class='String_ID_ISSUE'>
+        <b>ID: APP_NAME</b> - <i>20pt, tracking 0, 1 line(s)</i>
+        <div class="app_name" style='width:450px; height:25px'><span>WEATHER</span></div>
+    </li>
+
+    <li class='String_ID_ISSUE'>
+        <b>ID: weat_My_location</b> - <i>38pt, tracking 200, 2 line(s)</i>
+        <div class="Size_38pt_TR_200"
+             style='width:450px; height:95px'><span>MY LOCATION jjfldsj lfsdj lflksdj fklsdkjljflksd fjsdl
+            flksj lkf</span></div>
+    </li>
+
+    <li class='String_ID_ISSUE'>
+        <b>ID: weat_Main_Temperature</b> - <i>200pt, tracking -50, 1 line(s)</i>
+        <div class="Size_200pt_TR_MINUS_50" style='width:720px; height:250px'><span>XYZ�</span></div>
+    </li>
+
+    <li class='String_ID_ISSUE'>
+        <b>ID: weat_Partly_sunny</b> - <i>38pt, tracking 50, 1 line(s)</i>
+        <div class="Size_38pt_TR_50" style='width:450px; height:47px'><span>Partly sunny loriem ipsum jlfkjflskjfls fjlskf </span></div>
+    </li>
+
+</ul>
+
+</body>
+</html>
+
+`

@@ -1,0 +1,79 @@
+	body {
+		font-family: 'Tipperary for JLR - HKTW';
+   background-color: #000000;
+   color:white;
+}
+
+h2{
+	font-weight:bold;
+	font-size: 25pt;
+}
+
+	.app_name	{
+		/*38pt, Tracking 50*/
+		font-family: 'Tipperary for JLR - HKTW';
+		font-size: 14pt;
+		text-align: left;
+		color: red;
+		outline: 2px solid white;
+
+	}
+
+
+.String_ID_OK {
+	/*Label above each text box referencing the string ID from the translations database*/
+		font-family: 'Tipperary for JLR - HKTW';
+		font-size: 15pt;
+		text-align: left;
+		color: red;
+		margin-bottom: 5px;
+	}
+
+.String_ID_ISSUE {
+	/*Label above each text box referencing the string ID from the translations database*/
+		font-family: 'Tipperary for JLR - HKTW';
+		font-size: 15pt;
+		text-align: left;
+		color: WHITE;
+		margin-bottom: 5px;
+	}
+
+	.Size_38pt_TR_50 {
+		/*38pt, Tracking 50*/
+		font-family: 'Tipperary for JLR - HKTW';
+		font-size: 28pt;
+		letter-spacing: 1.8pt;
+		text-align: left;
+		color: red;
+		outline: 2px solid white;
+		margin-bottom: 20px;
+	}
+
+
+	.Size_38pt_TR_200 {
+		/*38pt, Tracking 200*/
+		font-family: 'Tipperary for JLR - HKTW';
+		font-size: 26pt;
+		letter-spacing: 6pt;
+		text-align: left;
+		color: red;
+		outline: 2px solid white;
+		margin-bottom: 20px;
+	}
+
+	.Size_200pt_TR_MINUS_50 {
+		/*200pt, Tracking -50*/
+		font-family: 'Tipperary for JLR - HKTW';
+		font-size: 150pt;
+		letter-spacing: -7.5pt;
+		text-align: left;
+		color: red;
+		outline: 2px solid white;
+		margin-bottom: 20px;
+
+	}
+
+	
+
+
+
