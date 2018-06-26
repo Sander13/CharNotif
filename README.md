@@ -5,7 +5,6 @@ Detect character overflow issues within a fixed parent container.
 ## Getting Started
 
 Currently adding the script to the head is the only required. 
-TODO: Create package for ease of installation
 
 ### Prerequisites
 
@@ -17,7 +16,7 @@ Give examples
 
 ### Installing
 
-TODO:
+TODO: Create package for ease of installation
 
 
 ## Deployment
